@@ -1,11 +1,11 @@
 # Setting up#
- ## API Testing ##
+Ensure that you have the latest version of NodeJs
 
- Open the ht folder
- run
+ ## API Testing ##
+    Clone the Project to you pc
+ Open the httests/api folder
+ Open the Terminal and run
 
  ```
  newman run ht.json
  ```
-
- 
