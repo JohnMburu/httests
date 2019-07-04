@@ -29,3 +29,9 @@ jobs:
       - run:
           name: API Testing
           command: 'newman run ./api/ht.json'
+
+  workflows:
+  version: 2
+  buildapi_tests:
+    jobs:
+      - buildapi
