@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "64f07840-1189-40e1-82b1-6d23e3954c55",
+		"name": "ht",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e8a5c087-0484-4698-a858-f8aa5fe7236a",
+						"exec": [
+							"pm.test(\"Check response code 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Verify that the response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"",
+							"",
+							"//",
+							"let jsonData = pm.response.json();",
+							"jsonSize=jsonData.length",
+							"pm.test(\"Looking for Group\", function () {",
+							"    for (var i=0;i<jsonSize;i++){",
+							"        var GrpName= new RegExp(\".*Group*\");",
+							"        if(GrpName.test(jsonData[i].company.name)){",
+							"            console.log(jsonData[i].company.name);",
+							"        }",
+							"    }",
+							"   ",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/users",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
