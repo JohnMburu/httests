@@ -51,7 +51,7 @@ jobs:
   #           - node_modules
   #         key: v1-dependencies-{{ checksum "package.json" }}
 
-  #     - run: yarn teste2e
+  #     - run: yarn e2e
 
   #     - store_test_results:
   #         path: /tmp/test-results

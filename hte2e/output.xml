@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.2 on win32)" generated="20190706 15:54:54.536" rpa="false">
+<suite id="s1" name="Hte2E" source="D:\Auto\hte2e">
+<suite id="s1-s1" name="Test" source="D:\Auto\hte2e\test">
+<suite id="s1-s1-s1" name="Webtest" source="D:\Auto\hte2e\test\webtest.robot">
+<test id="s1-s1-s1-t1" name="InvalidNameTestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190706 15:54:55.013" level="INFO">Opening browser 'chrome' to base url 'https://www.ultimateqa.com/filling-out-forms/'.</msg>
+<status status="PASS" starttime="20190706 15:54:55.013" endtime="20190706 15:55:02.895"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${blankname_txt}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:02.898" level="INFO">Typing text '' into text field 'et_pb_contact_name_0'.</msg>
+<status status="PASS" starttime="20190706 15:55:02.896" endtime="20190706 15:55:03.066"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_txt}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:03.068" level="INFO">Typing text 'This is a sample message' into text field 'et_pb_contact_message_0'.</msg>
+<status status="PASS" starttime="20190706 15:55:03.067" endtime="20190706 15:55:03.695"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button1}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:03.697" level="INFO">Clicking button '//*[@id="et_pb_contact_form_0"]/div[2]/form/div/button'.</msg>
+<status status="PASS" starttime="20190706 15:55:03.696" endtime="20190706 15:55:03.863"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="et_pb_contact_form_0"]/div[1]/p</arg>
+</arguments>
+<assign>
+<var>${valresults}</var>
+</assign>
+<msg timestamp="20190706 15:55:03.945" level="INFO">${valresults} = Please, fill in the following fields:</msg>
+<status status="PASS" starttime="20190706 15:55:03.864" endtime="20190706 15:55:03.945"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${valresults}</arg>
+<arg>${validationmsg}</arg>
+</arguments>
+<status status="PASS" starttime="20190706 15:55:03.946" endtime="20190706 15:55:03.947"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="et_pb_contact_form_0"]/div[1]/ul[1]/li</arg>
+</arguments>
+<assign>
+<var>${valname}</var>
+</assign>
+<msg timestamp="20190706 15:55:04.037" level="INFO">${valname} = Name</msg>
+<status status="PASS" starttime="20190706 15:55:03.948" endtime="20190706 15:55:04.038"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${nameval}</arg>
+<arg>${valname}</arg>
+</arguments>
+<status status="PASS" starttime="20190706 15:55:04.038" endtime="20190706 15:55:04.039"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190706 15:55:04.040" endtime="20190706 15:55:06.710"></status>
+</kw>
+<status status="PASS" starttime="20190706 15:54:55.011" endtime="20190706 15:55:06.711" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="InvalidMessageTestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190706 15:55:06.715" level="INFO">Opening browser 'chrome' to base url 'https://www.ultimateqa.com/filling-out-forms/'.</msg>
+<status status="PASS" starttime="20190706 15:55:06.714" endtime="20190706 15:55:15.114"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${name_txt}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:15.117" level="INFO">Typing text 'John Mburu' into text field 'et_pb_contact_name_0'.</msg>
+<status status="PASS" starttime="20190706 15:55:15.115" endtime="20190706 15:55:15.541"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${blankmessage_txt}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:15.542" level="INFO">Typing text '' into text field 'et_pb_contact_message_0'.</msg>
+<status status="PASS" starttime="20190706 15:55:15.541" endtime="20190706 15:55:15.902"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button1}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:15.903" level="INFO">Clicking button '//*[@id="et_pb_contact_form_0"]/div[2]/form/div/button'.</msg>
+<status status="PASS" starttime="20190706 15:55:15.903" endtime="20190706 15:55:16.170"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="et_pb_contact_form_0"]/div[1]/p</arg>
+</arguments>
+<assign>
+<var>${valresults}</var>
+</assign>
+<msg timestamp="20190706 15:55:16.242" level="INFO">${valresults} = Please, fill in the following fields:</msg>
+<status status="PASS" starttime="20190706 15:55:16.171" endtime="20190706 15:55:16.243"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${valresults}</arg>
+<arg>${validationmsg}</arg>
+</arguments>
+<status status="PASS" starttime="20190706 15:55:16.243" endtime="20190706 15:55:16.244"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="et_pb_contact_form_0"]/div[1]/ul[1]/li</arg>
+</arguments>
+<assign>
+<var>${valmessage}</var>
+</assign>
+<msg timestamp="20190706 15:55:16.322" level="INFO">${valmessage} = Message</msg>
+<status status="PASS" starttime="20190706 15:55:16.245" endtime="20190706 15:55:16.322"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${valmessage}</arg>
+<arg>${messageval}</arg>
+</arguments>
+<status status="PASS" starttime="20190706 15:55:16.323" endtime="20190706 15:55:16.324"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190706 15:55:16.325" endtime="20190706 15:55:18.817"></status>
+</kw>
+<status status="PASS" starttime="20190706 15:55:06.713" endtime="20190706 15:55:18.818" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="TypeMessageTestCase">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190706 15:55:18.821" level="INFO">Opening browser 'chrome' to base url 'https://www.ultimateqa.com/filling-out-forms/'.</msg>
+<status status="PASS" starttime="20190706 15:55:18.820" endtime="20190706 15:55:28.169"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${name_txt}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:28.171" level="INFO">Typing text 'John Mburu' into text field 'et_pb_contact_name_0'.</msg>
+<status status="PASS" starttime="20190706 15:55:28.170" endtime="20190706 15:55:28.685"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${message}</arg>
+<arg>${message_txt}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:28.686" level="INFO">Typing text 'This is a sample message' into text field 'et_pb_contact_message_0'.</msg>
+<status status="PASS" starttime="20190706 15:55:28.686" endtime="20190706 15:55:29.173"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button1}</arg>
+</arguments>
+<msg timestamp="20190706 15:55:29.175" level="INFO">Clicking button '//*[@id="et_pb_contact_form_0"]/div[2]/form/div/button'.</msg>
+<status status="PASS" starttime="20190706 15:55:29.174" endtime="20190706 15:55:29.324"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="et_pb_contact_form_0"]/div/p</arg>
+</arguments>
+<status status="PASS" starttime="20190706 15:55:29.325" endtime="20190706 15:55:30.505"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="et_pb_contact_form_0"]/div/p</arg>
+</arguments>
+<assign>
+<var>${results}</var>
+</assign>
+<msg timestamp="20190706 15:55:30.553" level="INFO">${results} = Form filled out successfully</msg>
+<status status="PASS" starttime="20190706 15:55:30.506" endtime="20190706 15:55:30.553"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${results}</arg>
+</arguments>
+<status status="PASS" starttime="20190706 15:55:30.554" endtime="20190706 15:55:30.554"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${results}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" starttime="20190706 15:55:30.555" endtime="20190706 15:55:30.556"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190706 15:55:30.556" endtime="20190706 15:55:33.329"></status>
+</kw>
+<status status="PASS" starttime="20190706 15:55:18.819" endtime="20190706 15:55:33.330" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190706 15:54:54.636" endtime="20190706 15:55:33.332"></status>
+</suite>
+<status status="PASS" starttime="20190706 15:54:54.633" endtime="20190706 15:55:33.339"></status>
+</suite>
+<status status="PASS" starttime="20190706 15:54:54.599" endtime="20190706 15:55:33.344"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Hte2E">Hte2E</stat>
+<stat pass="3" fail="0" id="s1-s1" name="Test">Hte2E.Test</stat>
+<stat pass="3" fail="0" id="s1-s1-s1" name="Webtest">Hte2E.Test.Webtest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
