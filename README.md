@@ -9,8 +9,8 @@ Ensure that you have the latest version of NodeJs
  ```
  newman run ht.json
  ```
-
- # Robbot Framework#
+# Web application Tests
+ ## Robot Framework ##
  Ensure that Python and pip is installed in your PC
 
  Run the following command in terminal
@@ -29,8 +29,8 @@ pip install --upgrade robotframework-seleniumlibrary
 
  Navigate to the test folder
 
- cd httests
- cd test
+ - cd httests
+ - cd test
 
  to run the e2e tests
  run
