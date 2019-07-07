@@ -23,4 +23,18 @@ pip install robortframework
 pip install --upgrade robotframework-seleniumlibrary
 ```
  
- 
+ ```
+ pip install robotframework-ride
+ ```
+
+ Navigate to the test folder
+
+ cd httests
+ cd test
+
+ to run the e2e tests
+ run
+
+ ```
+ robot webtest.robot
+ ```
