@@ -27,6 +27,11 @@ pip install --upgrade robotframework-seleniumlibrary
  pip install robotframework-ride
  ```
 
+Copy browser driver into the scripts folder your python installation folder
+e.g
+..\Python\Python37-32\Scripts
+
+now opn the tests folder
  Navigate to the test folder
 
  - cd httests
